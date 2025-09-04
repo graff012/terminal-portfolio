@@ -1,0 +1,302 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match design brief for richer interactive experience */
+  --background: #000000; /* Pure black for terminal */
+  --foreground: #00ff41; /* Matrix green */
+  --card: #0a0a0a; /* Slightly lighter black for cards */
+  --card-foreground: #00ff41; /* Matrix green text */
+  --popover: #000000; /* Black popover */
+  --popover-foreground: #00ff41; /* Green popover text */
+  --primary: #00ff41; /* Matrix green primary */
+  --primary-foreground: #000000; /* Black text on green */
+  --secondary: #ff6b35; /* Orange accent */
+  --secondary-foreground: #000000; /* Black text on orange */
+  --muted: #333333; /* Dark gray muted */
+  --muted-foreground: #888888; /* Light gray muted text */
+  --accent: #ff6b35; /* Orange accent */
+  --accent-foreground: #000000; /* Black accent text */
+  --destructive: #ff0040; /* Red for errors */
+  --destructive-foreground: #ffffff; /* White destructive text */
+  --border: #00ff41; /* Green borders */
+  --input: #0a0a0a; /* Dark input background */
+  --ring: #ff6b35; /* Orange focus ring */
+  --chart-1: #00ff41;
+  --chart-2: #ff6b35;
+  --chart-3: #ffffff;
+  --chart-4: #00ff41;
+  --chart-5: #ff6b35;
+  --radius: 0.2rem; /* Small radius for terminal look */
+  --sidebar: #000000;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #00ff41;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #ff6b35;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #00ff41;
+  --sidebar-ring: #ff6b35;
+}
+
+.dark {
+  /* Dark mode uses same terminal colors */
+  --background: #000000;
+  --foreground: #00ff41;
+  --card: #0a0a0a;
+  --card-foreground: #00ff41;
+  --popover: #000000;
+  --popover-foreground: #00ff41;
+  --primary: #00ff41;
+  --primary-foreground: #000000;
+  --secondary: #ff6b35;
+  --secondary-foreground: #000000;
+  --muted: #333333;
+  --muted-foreground: #888888;
+  --accent: #ff6b35;
+  --accent-foreground: #000000;
+  --destructive: #ff0040;
+  --destructive-foreground: #ffffff;
+  --border: #00ff41;
+  --input: #0a0a0a;
+  --ring: #ff6b35;
+  --chart-1: #00ff41;
+  --chart-2: #ff6b35;
+  --chart-3: #ffffff;
+  --chart-4: #00ff41;
+  --chart-5: #ff6b35;
+  --sidebar: #000000;
+  --sidebar-foreground: #00ff41;
+  --sidebar-primary: #00ff41;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #ff6b35;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #00ff41;
+  --sidebar-ring: #ff6b35;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-mono;
+    /* Added scanline effect and subtle glow */
+    background-image: linear-gradient(90deg, transparent 98%, rgba(0, 255, 65, 0.03) 100%),
+      linear-gradient(0deg, transparent 98%, rgba(0, 255, 65, 0.03) 100%);
+    background-size: 3px 3px;
+  }
+
+  /* Enhanced terminal-specific styles with animations and effects */
+  .terminal-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .terminal-text {
+    font-family: "Courier New", monospace;
+    line-height: 1.4;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  }
+
+  .ascii-art {
+    white-space: pre;
+    font-family: monospace;
+    line-height: 1;
+  }
+
+  /* Added typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(40, end), fadeIn 0.5s ease-in;
+  }
+
+  /* Added glitch effect */
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  .glitch:hover {
+    animation: glitch 0.3s ease-in-out;
+  }
+
+  /* Added matrix rain effect */
+  @keyframes matrix-rain {
+    0% {
+      transform: translateY(-100vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  .matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .matrix-char {
+    position: absolute;
+    color: #00ff41;
+    font-family: monospace;
+    font-size: 14px;
+    animation: matrix-rain linear infinite;
+    opacity: 0.7;
+  }
+
+  /* Added hover effects for interactive elements */
+  .terminal-hover {
+    transition: all 0.3s ease;
+  }
+
+  .terminal-hover:hover {
+    color: #ff6b35;
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.8);
+    transform: translateX(5px);
+  }
+
+  /* Added progress bar animations */
+  @keyframes progress-fill {
+    from {
+      width: 0%;
+    }
+    to {
+      width: var(--progress-width);
+    }
+  }
+
+  .progress-bar {
+    animation: progress-fill 2s ease-out forwards;
+  }
+
+  /* Added CRT monitor effect */
+  .crt-effect {
+    position: relative;
+  }
+
+  .crt-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent 50%, rgba(0, 255, 65, 0.03) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Added particle effect */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .floating-particle {
+    animation: float 3s ease-in-out infinite;
+  }
+}
