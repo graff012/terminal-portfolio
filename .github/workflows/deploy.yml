@@ -1,4 +1,4 @@
-name: Deploy To Server with Docker Registry
+name: Deploy to Server with Docker Registry
 
 on:
   push:
