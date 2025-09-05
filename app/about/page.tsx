@@ -1,25 +1,27 @@
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Download } from "lucide-react"
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="max-w-4xl mx-auto p-4">
+      <div className="max-w-4xl mx-auto p-2 sm:p-4">
         <Card className="bg-card border-primary/30 shadow-lg shadow-primary/10">
-          <div className="p-6">
-            <div className="flex items-center justify-between gap-2 mb-4 pb-2 border-b border-primary/30">
-              <span className="text-primary font-mono">~/about</span>
+          <div className="p-3 sm:p-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-2 mb-4 pb-2 border-b border-primary/30">
+              <span className="text-primary font-mono text-sm sm:text-base">
+                ~/about
+              </span>
               <Button
                 asChild
                 variant="outline"
                 size="sm"
-                className="border-primary/50 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 group bg-transparent"
+                className="border-primary/50 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 group bg-transparent w-full sm:w-auto"
               >
                 <a
                   href="/Nuriddin_Sobirjonov_CV.pdf"
                   download="Nuriddin_Sobirjonov_CV.pdf"
-                  className="flex items-center gap-2"
+                  className="flex items-center justify-center gap-2"
                 >
                   <Download className="w-4 h-4 group-hover:animate-bounce" />
                   <span className="font-mono text-xs">download_cv.pdf</span>
@@ -27,16 +29,22 @@ export default function AboutPage() {
               </Button>
             </div>
             <div className="terminal-text space-y-4">
-              <div className="text-primary">$ whoami</div>
-              <div className="text-lg">Hello! I'm Nuriddin Sobirjonov</div>
+              <div className="text-primary text-sm sm:text-base">$ whoami</div>
+              <div className="text-base sm:text-lg">
+                Hello! I'm Nuriddin Sobirjonov
+              </div>
 
               <div className="mt-6">
-                <div className="text-primary/80 mb-3">Profile:</div>
+                <div className="text-primary/80 mb-3 text-sm sm:text-base">
+                  Profile:
+                </div>
                 <div className="space-y-3">
-                  <div>
-                    Motivated Fullstack Developer skilled in building scalable web applications with modern
-                    technologies. Passionate about clean code, problem-solving, and contributing to real-world projects.
-                    Seeking an opportunity to learn from experienced teams while delivering value to users.
+                  <div className="text-sm sm:text-base leading-relaxed">
+                    Motivated Fullstack Developer skilled in building scalable
+                    web applications with modern technologies. Passionate about
+                    clean code, problem-solving, and contributing to real-world
+                    projects. Seeking an opportunity to learn from experienced
+                    teams while delivering value to users.
                   </div>
                 </div>
               </div>
@@ -86,7 +94,8 @@ export default function AboutPage() {
               <div className="mt-6">
                 <div className="text-primary/80">Current Focus:</div>
                 <div className="ml-4 mt-2">
-                  Building modern fullstack applications with React, NestJS, and PostgreSQL
+                  Building modern fullstack applications with React, NestJS, and
+                  PostgreSQL
                 </div>
               </div>
             </div>
@@ -94,5 +103,5 @@ export default function AboutPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
