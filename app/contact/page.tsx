@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card"
-import ContactForm from "@/components/contact-form"
+import { Card } from "@/components/ui/card";
+import ContactForm from "@/components/contact-form";
 
 export default function ContactPage() {
   return (
@@ -13,12 +13,17 @@ export default function ContactPage() {
               <span className="text-primary font-mono">~/contact/info</span>
             </div>
             <div className="terminal-text">
-              <div className="text-primary mb-6">=== CONTACT INFORMATION ===</div>
+              <div className="text-primary mb-6">
+                === CONTACT INFORMATION ===
+              </div>
 
               <div className="space-y-4">
                 <div className="space-y-3">
                   <div className="hover:text-primary/80 transition-colors cursor-pointer">
-                    <a href="mailto:sobirjonovnuriddin43@gmail.com" className="hover:underline">
+                    <a
+                      href="mailto:sobirjonovnuriddin43@gmail.com"
+                      className="hover:underline"
+                    >
                       📧 Email: sobirjonovnuriddin43@gmail.com
                     </a>
                   </div>
@@ -42,11 +47,11 @@ export default function ContactPage() {
                       🐙 GitHub: github.com/graff012
                     </a>
                   </div>
-                  <div className="hover:text-primary/80 transition-colors cursor-pointer">
-                    <a href="https://nuriddin.uz" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                      🌐 Portfolio: nuriddin.uz
-                    </a>
-                  </div>
+                  {/* <div className="hover:text-primary/80 transition-colors cursor-pointer"> */}
+                  {/*   <a href="https://nuriddin.uz" target="_blank" rel="noopener noreferrer" className="hover:underline"> */}
+                  {/*     🌐 Portfolio: nuriddin.uz */}
+                  {/*   </a> */}
+                  {/* </div> */}
                   <div className="hover:text-primary/80 transition-colors cursor-pointer">
                     <a
                       href="https://t.me/tt_me12"
@@ -68,7 +73,9 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-8">
-                  <div className="text-primary/80 mb-3">Preferred Contact Methods:</div>
+                  <div className="text-primary/80 mb-3">
+                    Preferred Contact Methods:
+                  </div>
                   <div className="ml-4 space-y-2">
                     <div>├── Email (fastest response)</div>
                     <div>├── Telegram (quick messages)</div>
@@ -91,12 +98,17 @@ export default function ContactPage() {
                 <div className="mt-8 p-4 border border-primary/30 rounded bg-background/30 hover:bg-background/50 transition-colors">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-primary/80">$ status --availability</span>
+                    <span className="text-primary/80">
+                      $ status --availability
+                    </span>
                   </div>
-                  <div className="text-green-400 mb-2">✓ Available for new opportunities</div>
+                  <div className="text-green-400 mb-2">
+                    ✓ Available for new opportunities
+                  </div>
                   <div>
-                    Currently seeking exciting fullstack development roles and interesting projects. Let's build
-                    something amazing together!
+                    Currently seeking exciting fullstack development roles and
+                    interesting projects. Let's build something amazing
+                    together!
                   </div>
                 </div>
 
@@ -114,5 +126,5 @@ export default function ContactPage() {
         </Card>
       </div>
     </div>
-  )
+  );
 }
