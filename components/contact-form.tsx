@@ -23,7 +23,7 @@ export default function ContactForm() {
       } catch (error) {
         setState({
           success: false,
-          message: "An error occurred while sending your message.",
+          message: "An Error occurred while sending your message.",
         });
       }
     });
