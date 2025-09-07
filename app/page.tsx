@@ -97,13 +97,13 @@ export default function HomePage() {
         <Card className="bg-card border-primary/30 shadow-lg shadow-primary/10 crt-effect">
           <div className="p-4 md:p-8">
             <div className="terminal-text text-center">
-              {/* ASCII for screens 420px and above */}
-              <pre className="hidden xs:block text-[6px] xs:text-[8px] sm:text-[9px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-nowrap glitch">
+              {/* ASCII for screens 380px and above */}
+              <pre className="min-[380px]:block hidden text-[6px] xs:text-[8px] sm:text-[9px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-nowrap glitch">
                 {asciiArt}
               </pre>
 
-              {/* Clean text alternative for very small mobile screens below 420px */}
-              <div className="block xs:hidden text-center mb-4">
+              {/* Clean text alternative for very small screens below 380px */}
+              <div className="min-[380px]:hidden text-center mb-4">
                 <div className="text-3xl font-bold text-primary font-mono tracking-widest glitch">
                   NURIDDIN
                 </div>
