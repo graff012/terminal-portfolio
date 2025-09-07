@@ -46,13 +46,13 @@ export default function HomePage() {
           <div className="p-4 md:p-8">
             <div className="terminal-text text-center">
               {/* ASCII for all screens except very small mobile */}
-              <pre className="text-[8px] xs:text-[9px] sm:text-[10px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-pre glitch max-[360px]:hidden">
+              <pre className="text-[8px] xs:text-[9px] sm:text-[10px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-pre glitch max-[420px]:hidden">
                 {asciiArt}
               </pre>
 
               {/* Clean text alternative for very small screens only */}
-              <div className="max-[360px]:block hidden text-center mb-4">
-                <div className="text-4xl font-bold text-primary font-mono tracking-widest glitch">
+              <div className="max-[420px]:block hidden text-center mb-4">
+                <div className="text-5xl font-bold text-primary font-mono tracking-widest glitch">
                   NURIDDIN
                 </div>
                 <div className="text-sm text-primary/70 font-mono mt-1">
