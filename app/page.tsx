@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
-import { Menu, X } from "lucide-react";
 import Link from "next/link";
 
 // TypingText component
@@ -98,9 +97,20 @@ export default function HomePage() {
         <Card className="bg-card border-primary/30 shadow-lg shadow-primary/10 crt-effect">
           <div className="p-4 md:p-8">
             <div className="terminal-text text-center">
-              <pre className="text-[6px] xs:text-[8px] sm:text-[9px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto glitch">
+              {/* ASCII for screens 640px and above */}
+              <pre className="hidden sm:block text-[8px] sm:text-[9px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-nowrap glitch">
                 {asciiArt}
               </pre>
+
+              {/* Clean text alternative for mobile screens below 640px */}
+              <div className="block sm:hidden text-center mb-4">
+                <div className="text-3xl font-bold text-primary font-mono tracking-widest glitch">
+                  NURIDDIN
+                </div>
+                <div className="text-sm text-primary/70 font-mono mt-1">
+                  SOFTWARE DEVELOPER
+                </div>
+              </div>
 
               <div className="text-primary text-lg md:text-xl mb-3 md:mb-4">
                 <TypingText text="Welcome to my Portfolio" speed={80} />
