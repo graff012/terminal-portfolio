@@ -104,7 +104,7 @@ export default function HomePage() {
 
               {/* Clean text alternative for very small screens only */}
               <div className="max-[360px]:block hidden text-center mb-4">
-                <div className="text-4xl font-bold text-primary font-mono tracking-widest glitch">
+                <div className="text-3xl font-bold text-primary font-mono tracking-widest glitch">
                   NURIDDIN
                 </div>
                 <div className="text-sm text-primary/70 font-mono mt-1">
