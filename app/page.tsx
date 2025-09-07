@@ -40,71 +40,19 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Mobile Navigation Header - Only visible on mobile */}
-      {/* <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-primary/20"> */}
-      {/*   <div className="flex items-center justify-between px-4 py-4"> */}
-      {/*     <div className="text-primary font-mono text-lg font-bold"> */}
-      {/*       NURIDDIN */}
-      {/*     </div> */}
-      {/*     <button */}
-      {/*       onClick={toggleMenu} */}
-      {/*       className="text-primary p-2" */}
-      {/*       aria-label="Toggle menu" */}
-      {/*     > */}
-      {/*       {isMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
-      {/*     </button> */}
-      {/*   </div> */}
-      {/**/}
-      {/*   {/* Mobile Navigation Menu */}
-      {/*   {isMenuOpen && ( */}
-      {/*     <nav className="border-t border-primary/20 bg-background/95"> */}
-      {/*       <div className="flex flex-col space-y-3 px-4 py-4"> */}
-      {/*         <Link */}
-      {/*           href="/about" */}
-      {/*           className="text-primary hover:text-primary/80 transition-colors font-mono" */}
-      {/*           onClick={() => setIsMenuOpen(false)} */}
-      {/*         > */}
-      {/*           About */}
-      {/*         </Link> */}
-      {/*         <Link */}
-      {/*           href="/skills" */}
-      {/*           className="text-primary hover:text-primary/80 transition-colors font-mono" */}
-      {/*           onClick={() => setIsMenuOpen(false)} */}
-      {/*         > */}
-      {/*           Skills */}
-      {/*         </Link> */}
-      {/*         <Link */}
-      {/*           href="/projects" */}
-      {/*           className="text-primary hover:text-primary/80 transition-colors font-mono" */}
-      {/*           onClick={() => setIsMenuOpen(false)} */}
-      {/*         > */}
-      {/*           Projects */}
-      {/*         </Link> */}
-      {/*         <Link */}
-      {/*           href="/contact" */}
-      {/*           className="text-primary hover:text-primary/80 transition-colors font-mono" */}
-      {/*           onClick={() => setIsMenuOpen(false)} */}
-      {/*         > */}
-      {/*           Contact */}
-      {/*         </Link> */}
-      {/*       </div> */}
-      {/*     </nav> */}
-      {/*   )} */}
-      {/* </div> */}
-
       {/* Main Content - Your original code with mobile responsive adjustments */}
       <div className="max-w-4xl mx-auto p-4 pt-20 md:pt-4">
         <Card className="bg-card border-primary/30 shadow-lg shadow-primary/10 crt-effect">
           <div className="p-4 md:p-8">
             <div className="terminal-text text-center">
               {/* ASCII for all screens except very small mobile */}
-              <pre className="text-[6px] xs:text-[8px] sm:text-[9px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-nowrap glitch max-[360px]:hidden">
+              <pre className="text-[8px] xs:text-[9px] sm:text-[10px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto whitespace-pre glitch max-[360px]:hidden">
                 {asciiArt}
               </pre>
 
               {/* Clean text alternative for very small screens only */}
               <div className="max-[360px]:block hidden text-center mb-4">
-                <div className="text-3xl font-bold text-primary font-mono tracking-widest glitch">
+                <div className="text-4xl font-bold text-primary font-mono tracking-widest glitch">
                   NURIDDIN
                 </div>
                 <div className="text-sm text-primary/70 font-mono mt-1">
