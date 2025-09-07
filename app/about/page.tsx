@@ -19,8 +19,8 @@ export default function AboutPage() {
                 className="border-primary/50 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300 group bg-transparent w-full sm:w-auto"
               >
                 <a
-                  href="/Nuriddin_Sobirjonov_CV.pdf"
-                  download="Nuriddin_Sobirjonov_CV.pdf"
+                  href="/resume.pdf"
+                  download="resume.pdf"
                   className="flex items-center justify-center gap-2"
                 >
                   <Download className="w-4 h-4 group-hover:animate-bounce" />
