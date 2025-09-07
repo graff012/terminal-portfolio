@@ -98,7 +98,7 @@ export default function HomePage() {
         <Card className="bg-card border-primary/30 shadow-lg shadow-primary/10 crt-effect">
           <div className="p-4 md:p-8">
             <div className="terminal-text text-center">
-              <pre className="text-[6px] xs:text-[9px] sm:text-[10px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto glitch">
+              <pre className="text-[6px] xs:text-[8px] sm:text-[9px] md:text-xs text-primary/80 mb-4 md:mb-6 overflow-x-auto glitch">
                 {asciiArt}
               </pre>
 
