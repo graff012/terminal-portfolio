@@ -16,7 +16,7 @@ const skillGroups: SkillGroup[] = [
     title: "AI & LLM",
     skills: [
       { name: "Prompt Engineering", level: 90 },
-      { name: "AI-Assisted Development", level: 90 },
+      { name: "Agent Harnesses (Claude Code, Cursor)", level: 85 },
       { name: "LLM APIs (Claude, OpenAI)", level: 85 },
       { name: "AI Agents & Tool Use", level: 80 },
       { name: "Model Evaluation", level: 75 },
