@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 type Role = {
   company: string;
+  url?: string;
   title: string;
   type: string;
   period: string;
@@ -21,12 +22,13 @@ type Role = {
 const roles: Role[] = [
   {
     company: "Celion",
+    url: "https://celion.io",
     title: "Prompt Engineer",
     type: "Full-time",
     period: "Nov 2025 – Present",
-    location: "On-site",
+    location: "Tashkent, Uzbekistan · On-site",
     current: true,
-    tech: ["LLMs", "Prompt Engineering", "AI Evaluation"],
+    tech: ["LLMs", "AI Agents", "Prompt Engineering"],
     highlights: [
       "Design and optimize prompts for LLM-powered product features.",
       "Evaluate and iterate on model output quality, accuracy, and reliability.",
@@ -67,7 +69,19 @@ export default function ExperiencePage() {
                     </div>
 
                     <div className="text-primary/85 mt-0.5">
-                      {role.company} · {role.type}
+                      {role.url ? (
+                        <a
+                          href={role.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline decoration-primary/40 underline-offset-2 hover:decoration-primary"
+                        >
+                          {role.company}
+                        </a>
+                      ) : (
+                        role.company
+                      )}{" "}
+                      · {role.type}
                     </div>
 
                     <div className="text-primary/60 text-xs mt-1">
