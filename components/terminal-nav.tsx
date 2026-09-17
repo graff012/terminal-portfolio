@@ -10,6 +10,7 @@ export default function TerminalNav() {
   const navItems = [
     { href: "/", label: "home", command: "~/" },
     { href: "/about", label: "about", command: "~/about" },
+    { href: "/experience", label: "experience", command: "~/experience" },
     { href: "/skills", label: "skills", command: "~/skills" },
     { href: "/projects", label: "projects", command: "~/projects" },
     { href: "/contact", label: "contact", command: "~/contact" },

@@ -103,6 +103,12 @@ export default function HomePage() {
                     $ cd ~/about - Learn more about me
                   </Link>
                   <Link
+                    href="/experience"
+                    className="block terminal-hover cursor-pointer hover:text-primary transition-colors"
+                  >
+                    $ cd ~/experience - View my work experience
+                  </Link>
+                  <Link
                     href="/skills"
                     className="block terminal-hover cursor-pointer hover:text-primary transition-colors"
                   >
