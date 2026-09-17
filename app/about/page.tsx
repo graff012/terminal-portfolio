@@ -1,6 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn more about Nuriddin Sobirjonov — a fullstack software developer based in Fergana, Uzbekistan.",
+};
 
 export default function AboutPage() {
   return (
@@ -31,7 +38,7 @@ export default function AboutPage() {
             <div className="terminal-text space-y-4">
               <div className="text-primary text-sm sm:text-base">$ whoami</div>
               <div className="text-base sm:text-lg">
-                Hello! I'm Nuriddin Sobirjonov
+                Hello! I&apos;m Nuriddin Sobirjonov
               </div>
 
               <div className="mt-6">
@@ -74,7 +81,7 @@ export default function AboutPage() {
                       rel="noopener noreferrer"
                       className="text-primary hover:text-primary/80 transition-colors"
                     >
-                      LinkedIn: linkedin.com/in/nuriddin-sobirjonov
+                      LinkedIn: linkedin.com/in/nuriddin-sobirjonov-1237802a8
                     </a>
                   </div>
                   <div>

@@ -1,5 +1,12 @@
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Featured projects by Nuriddin Sobirjonov — fullstack web applications built with React, Next.js, NestJS, and PostgreSQL.",
+};
 
 export default function ProjectsPage() {
   return (

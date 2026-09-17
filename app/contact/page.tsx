@@ -1,5 +1,12 @@
 import { Card } from "@/components/ui/card";
 import ContactForm from "@/components/contact-form";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Nuriddin Sobirjonov for full-time roles, freelance work, or collaboration.",
+};
 
 export default function ContactPage() {
   return (
@@ -29,12 +36,12 @@ export default function ContactPage() {
                   </div>
                   <div className="hover:text-primary/80 transition-colors cursor-pointer">
                     <a
-                      href="https://linkedin.com/in/nuriddin-sobirjonov"
+                      href="https://www.linkedin.com/in/nuriddin-sobirjonov-1237802a8"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
                     >
-                      🔗 LinkedIn: linkedin.com/in/nuriddin-sobirjonov
+                      🔗 LinkedIn: linkedin.com/in/nuriddin-sobirjonov-1237802a8
                     </a>
                   </div>
                   <div className="hover:text-primary/80 transition-colors cursor-pointer">
@@ -107,7 +114,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     Currently seeking exciting fullstack development roles and
-                    interesting projects. Let's build something amazing
+                    interesting projects. Let&apos;s build something amazing
                     together!
                   </div>
                 </div>

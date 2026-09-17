@@ -1,4 +1,11 @@
 import { Card } from "@/components/ui/card"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Skills",
+  description:
+    "Technical skills of Nuriddin Sobirjonov — languages, frameworks, databases, and tools.",
+}
 
 export default function SkillsPage() {
   return (
@@ -252,7 +259,7 @@ export default function SkillsPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-3">
                       <div className="border-l-2 border-primary/50 pl-4">
-                        <h3 className="text-primary font-semibold">Najot Ta'lim</h3>
+                        <h3 className="text-primary font-semibold">Najot Ta&apos;lim</h3>
                         <p className="text-primary/70 text-sm">Bootcamp Fullstack Development</p>
                         <p className="text-primary/60 text-xs">2024 - 2025</p>
                         <div className="mt-2 text-xs text-primary/50">Intensive fullstack development program</div>
@@ -263,7 +270,7 @@ export default function SkillsPage() {
                         <h3 className="text-primary font-semibold">Fergana Polytechnic Institute</h3>
                         <p className="text-primary/70 text-sm">B.A. Economics</p>
                         <p className="text-primary/60 text-xs">2021 - 2025</p>
-                        <div className="mt-2 text-xs text-primary/50">Bachelor's degree in Economics</div>
+                        <div className="mt-2 text-xs text-primary/50">Bachelor&apos;s degree in Economics</div>
                       </div>
                     </div>
                   </div>

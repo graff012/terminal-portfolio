@@ -20,13 +20,13 @@ export default function TerminalNav() {
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-2 mb-3">
           <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-destructive hover:bg-destructive/80 transition-all duration-300 cursor-pointer floating-particle"></div>
+            <div className="w-3 h-3 rounded-full bg-destructive/80 floating-particle"></div>
             <div
-              className="w-3 h-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 cursor-pointer floating-particle"
+              className="w-3 h-3 rounded-full bg-secondary/80 floating-particle"
               style={{ animationDelay: "1s" }}
             ></div>
             <div
-              className="w-3 h-3 rounded-full bg-primary hover:bg-primary/80 transition-all duration-300 cursor-pointer floating-particle"
+              className="w-3 h-3 rounded-full bg-primary/80 floating-particle"
               style={{ animationDelay: "2s" }}
             ></div>
           </div>

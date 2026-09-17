@@ -1,26 +1,6 @@
-"use client";
-
-import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-
-// TypingText component
-const TypingText = ({ text, speed = 50 }) => {
-  const [displayText, setDisplayText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  React.useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText((prev) => prev + text[currentIndex]);
-        setCurrentIndex((prev) => prev + 1);
-      }, speed);
-      return () => clearTimeout(timeout);
-    }
-  }, [currentIndex, text, speed]);
-
-  return <span>{displayText}</span>;
-};
+import TypingText from "@/components/typing-text";
 
 const asciiArt = `
 ███╗   ██╗██╗   ██╗██████╗ ██╗██████╗ ██████╗ ██╗███╗   ██╗
@@ -32,15 +12,8 @@ const asciiArt = `
 `;
 
 export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Main Content - Your original code with mobile responsive adjustments */}
       <div className="max-w-4xl mx-auto p-4 pt-20 md:pt-4">
         <Card className="bg-card border-primary/30 shadow-lg shadow-primary/10 crt-effect">
           <div className="p-4 md:p-8">

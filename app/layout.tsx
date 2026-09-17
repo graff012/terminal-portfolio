@@ -7,10 +7,43 @@ import ClientLayout from "./client-layout";
 import "./globals.css";
 import { Suspense } from "react";
 
+const siteUrl = "https://www.nuriddin.uz";
+
 export const metadata: Metadata = {
-  title: "Nuriddin Sobirjonov",
-  description: "Terminal-style portfolio of Nuriddin Sobirjonov",
-  generator: "v0.app",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Nuriddin Sobirjonov | Software Developer",
+    template: "%s | Nuriddin Sobirjonov",
+  },
+  description:
+    "Terminal-style portfolio of Nuriddin Sobirjonov, a fullstack software developer building modern web applications.",
+  keywords: [
+    "Nuriddin Sobirjonov",
+    "Software Developer",
+    "Fullstack Developer",
+    "React",
+    "Next.js",
+    "NestJS",
+    "PostgreSQL",
+    "Portfolio",
+  ],
+  authors: [{ name: "Nuriddin Sobirjonov", url: siteUrl }],
+  creator: "Nuriddin Sobirjonov",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Nuriddin Sobirjonov",
+    title: "Nuriddin Sobirjonov | Software Developer",
+    description:
+      "Terminal-style portfolio of Nuriddin Sobirjonov, a fullstack software developer building modern web applications.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nuriddin Sobirjonov | Software Developer",
+    description:
+      "Terminal-style portfolio of Nuriddin Sobirjonov, a fullstack software developer building modern web applications.",
+  },
 };
 
 export default function RootLayout({
