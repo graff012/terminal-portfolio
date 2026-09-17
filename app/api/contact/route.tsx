@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
   try {
     // Initialize Resend inside the function, not at the top
     if (!process.env.RESEND_API_KEY) {
-      throw new Error("RESEND_API_KEY is missing");
+      throw new Error("RESEND_API_KEY is missing.");
     }
     const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
       console.log("[v0] Missing required fields");
       return NextResponse.json(
         { error: "All fields are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       console.log("[v0] Invalid email format");
       return NextResponse.json(
         { error: "Invalid email format" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
       console.log("[v0] Resend error:", error);
       return NextResponse.json(
         { error: "Failed to send email" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
     console.error("[v0] API route error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
