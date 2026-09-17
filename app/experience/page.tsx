@@ -74,7 +74,8 @@ export default function ExperiencePage() {
                           href={role.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="underline decoration-primary/40 underline-offset-2 hover:decoration-primary"
+                          className="text-primary underline decoration-primary/50 underline-offset-2 hover:text-secondary hover:decoration-secondary transition-colors"
+                          title={`Visit ${role.company}`}
                         >
                           {role.company}
                         </a>
