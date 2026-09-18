@@ -4,7 +4,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Skills",
   description:
-    "Technical skills of Nuriddin Sobirjonov — AI/LLM, languages, frameworks, databases, and tools.",
+    "Technical skills of Nuriddin Sobirjonov — AI/LLM, Odoo/ERP, languages, frameworks, databases, and tools.",
 }
 
 type Skill = { name: string; level: number }
@@ -21,6 +21,17 @@ const skillGroups: SkillGroup[] = [
       { name: "AI Agents & Tool Use", level: 80 },
       { name: "Model Evaluation", level: 75 },
       { name: "RAG & Embeddings", level: 70 },
+    ],
+  },
+  {
+    icon: "🏢",
+    title: "Odoo & ERP",
+    skills: [
+      { name: "Odoo", level: 85 },
+      { name: "ERP Systems", level: 80 },
+      { name: "CRM", level: 80 },
+      { name: "Business Analysis", level: 80 },
+      { name: "Accounting", level: 75 },
     ],
   },
   {
