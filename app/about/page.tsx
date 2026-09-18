@@ -57,6 +57,36 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-6">
+                <div className="text-primary/80 mb-3">Education:</div>
+                <div className="ml-4 space-y-4">
+                  <div className="border-l-2 border-primary/50 pl-4">
+                    <div className="text-primary font-semibold">
+                      Najot Ta&apos;lim
+                    </div>
+                    <div className="text-primary/70 text-sm">
+                      Bootcamp Fullstack Development
+                    </div>
+                    <div className="text-primary/60 text-xs">2024 - 2025</div>
+                    <div className="mt-1 text-xs text-primary/50">
+                      Intensive fullstack development program
+                    </div>
+                  </div>
+                  <div className="border-l-2 border-primary/50 pl-4">
+                    <div className="text-primary font-semibold">
+                      Fergana Polytechnic Institute
+                    </div>
+                    <div className="text-primary/70 text-sm">
+                      B.A. Economics
+                    </div>
+                    <div className="text-primary/60 text-xs">2021 - 2025</div>
+                    <div className="mt-1 text-xs text-primary/50">
+                      Bachelor&apos;s degree in Economics
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6">
                 <div className="text-primary/80 mb-3">Location & Contact:</div>
                 <div className="ml-4 space-y-2">
                   <div>📍 Fergana, Uzbekistan</div>

@@ -71,21 +71,6 @@ const skillGroups: SkillGroup[] = [
   },
 ]
 
-const education = [
-  {
-    school: "Najot Ta'lim",
-    program: "Bootcamp Fullstack Development",
-    period: "2024 - 2025",
-    note: "Intensive fullstack development program",
-  },
-  {
-    school: "Fergana Polytechnic Institute",
-    program: "B.A. Economics",
-    period: "2021 - 2025",
-    note: "Bachelor's degree in Economics",
-  },
-]
-
 function SkillBar({ skill }: { skill: Skill }) {
   return (
     <div className="terminal-hover cursor-pointer group">
@@ -132,32 +117,6 @@ export default function SkillsPage() {
                     </div>
                   </Card>
                 ))}
-
-                <Card className="bg-card/20 border-primary/20 mt-8 p-4">
-                  <div className="text-primary/80 mb-4 text-lg flex items-center gap-2">
-                    <span className="text-xl">🎓</span> Education
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {education.map((item) => (
-                      <div key={item.school} className="space-y-3">
-                        <div className="border-l-2 border-primary/50 pl-4">
-                          <h3 className="text-primary font-semibold">
-                            {item.school}
-                          </h3>
-                          <p className="text-primary/70 text-sm">
-                            {item.program}
-                          </p>
-                          <p className="text-primary/60 text-xs">
-                            {item.period}
-                          </p>
-                          <div className="mt-2 text-xs text-primary/50">
-                            {item.note}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </Card>
               </div>
             </div>
           </div>
